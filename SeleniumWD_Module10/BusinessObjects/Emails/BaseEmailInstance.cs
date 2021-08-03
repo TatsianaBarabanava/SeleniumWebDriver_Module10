@@ -18,9 +18,9 @@ namespace SeleniumWebDriver.BusinessObjects.Emails
 
         public string Content => _content;
 
-        public abstract BaseEmailInstance getInstanceWithRandomSubjectAndContent(string sender, string email);
+        public abstract BaseEmailInstance GetInstanceWithRandomSubjectAndContent(string sender, string email);
 
-        public abstract BaseEmailInstance getInstanceWithRandomSubjectAndContent();
+        public abstract BaseEmailInstance GetInstanceWithRandomSubjectAndContent();
     }
       
 }

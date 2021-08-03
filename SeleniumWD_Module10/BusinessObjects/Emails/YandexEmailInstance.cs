@@ -17,9 +17,9 @@ namespace SeleniumWebDriver.BusinessObjects
             this._content = content;
         }
 
-        public override BaseEmailInstance getInstanceWithRandomSubjectAndContent()
+        public override BaseEmailInstance GetInstanceWithRandomSubjectAndContent()
         {
-            return (CommonEmailInstance) getInstanceWithRandomSubjectAndContent("Tatsiana Barabanava", "snieczka@yandex.by");
+            return (CommonEmailInstance) GetInstanceWithRandomSubjectAndContent("Tatsiana Barabanava", "snieczka@yandex.by");
         }
     }
 }

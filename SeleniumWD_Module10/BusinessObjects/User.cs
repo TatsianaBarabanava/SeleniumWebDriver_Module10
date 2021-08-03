@@ -16,7 +16,7 @@
 
         public static User GetDefaultUser()
         {
-            return new User("Snieczka", "2020327abc");
+            return new User("Snieczka", "2020327abcd");
         }
     }
 }

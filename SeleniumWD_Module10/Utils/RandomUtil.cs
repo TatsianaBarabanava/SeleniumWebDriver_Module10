@@ -5,7 +5,6 @@ namespace SeleniumWebDriver.Utils
 {
     public class RandomUtil
     {
-        private RandomUtil() { }
         private static RandomUtil instance = null;
 
         public static RandomUtil Instance
@@ -20,7 +19,9 @@ namespace SeleniumWebDriver.Utils
             }
         }
 
-        public string getRandomText(int numberOfSymbols)
+        private RandomUtil() { }
+
+        public string GetRandomText(int numberOfSymbols)
         {
             Random random = new Random();
             string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

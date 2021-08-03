@@ -11,8 +11,8 @@ namespace SeleniumWebDriver
         protected string baseUrl;
         protected string composeLinkText = "Написать письмо";
         protected readonly User user = User.GetDefaultUser();
-        protected readonly CommonEmailInstance yandexEmailInstance = (CommonEmailInstance) new YandexEmailInstance().getInstanceWithRandomSubjectAndContent();
-        protected readonly CommonEmailInstance gmailEmailInstance = (CommonEmailInstance) new GmailEmailInstance().getInstanceWithRandomSubjectAndContent();
+        protected readonly CommonEmailInstance yandexEmailInstance = (CommonEmailInstance)new YandexEmailInstance().GetInstanceWithRandomSubjectAndContent();
+        protected readonly CommonEmailInstance gmailEmailInstance = (CommonEmailInstance)new GmailEmailInstance().GetInstanceWithRandomSubjectAndContent();
 
         [SetUp]
         public void TestSetup()
@@ -22,15 +22,15 @@ namespace SeleniumWebDriver
 
             NavigateTo(this.baseUrl);
             WindowMaximize();
-            
+
             var homePage = new YandexHomePage();
             homePage.ClickOnLoginButton().Login(user).WaitForComposeLinkIsVisible();
         }
 
         [TearDown]
-          public void CleanUp()
-         {
-             Quit();
-         }
+        public void CleanUp()
+        {
+            Quit();
+        }
     }
 }

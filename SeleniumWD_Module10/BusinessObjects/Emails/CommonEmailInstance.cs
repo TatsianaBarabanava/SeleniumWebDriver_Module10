@@ -16,20 +16,20 @@ namespace SeleniumWebDriver.BusinessObjects
             this._content = content;
         }
 
-        public override BaseEmailInstance getInstanceWithRandomSubjectAndContent(string sender, string email)
+        public override BaseEmailInstance GetInstanceWithRandomSubjectAndContent(string sender, string email)
         {
-            string randomSubject = _randomUtil.getRandomText(5);
-            string randomContent = _randomUtil.getRandomText(10);
+            string randomSubject = _randomUtil.GetRandomText(5);
+            string randomContent = _randomUtil.GetRandomText(10);
 
             return new CommonEmailInstance(sender, email, randomSubject, randomContent);
         }
 
-        public override BaseEmailInstance getInstanceWithRandomSubjectAndContent()
+        public override BaseEmailInstance GetInstanceWithRandomSubjectAndContent()
         {
-            string randomEmail = _randomUtil.getRandomText(5)+"@mail.ru";
-            string randomSender = _randomUtil.getRandomText(5)+" " + _randomUtil.getRandomText(8);
+            string randomEmail = $"{_randomUtil.GetRandomText(5)}@mail.ru";
+            string randomSender = $"{_randomUtil.GetRandomText(5)} {_randomUtil.GetRandomText(8)}";
 
-            return  getInstanceWithRandomSubjectAndContent(randomSender, randomEmail);
+            return  GetInstanceWithRandomSubjectAndContent(randomSender, randomEmail);
         }
     }
 }
